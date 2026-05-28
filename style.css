@@ -1,0 +1,306 @@
+ @font-face {
+    font-family: 'Caviar Dreams';
+    src: url(CaviarDreams.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+        
+        :root {
+            --wood-dark: #3e2723;
+            --wood-light: #8d6e63;
+            --gold: #ffca28;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(fondo1.jpg);
+  background-repeat: repeat;
+  /* Animation */
+  animation: move 175s linear infinite;
+            font-family: 'Caviar Dreams', sans-serif;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Prevents scrolling while cranking */
+        }
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300px 300px;
+  }
+}
+        .organ-container {
+            flex: 1;
+            width: 100vw;
+            height: 100vh;
+            background: url("organillo.png") no-repeat center;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+        
+        .song-title {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: yellow;
+            padding: 10px 4px;
+            border: 2px ridge orange;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 2vh 9% 0px 9%;
+            z-index: 10;
+            text-shadow: 2px 2px 12px black;
+        }
+
+        /* Crank Styles - Using CSS for the demo, replace with your image */
+        .crank-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #crank {
+            width: 20px;
+            height: 260px;
+            background: linear-gradient(to right, silver, dimgray);
+            border-radius: 10px;
+            position: relative;
+            transform-origin: center center;
+            cursor: grab;
+            box-shadow: 2px 3px 10px rgba(0,0,0,0.8);
+            /* Starts horizontal for calculation ease */
+            transform: rotate(0deg); 
+        }
+
+        /* The handle of the crank */
+        #crank::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55px;
+            height: 55px;
+            background: radial-gradient(circle, yellowgreen, seagreen);
+            border-radius: 50%;
+            box-shadow: inset -2px -5px 10px rgba(0,0,0,0.6);
+        }
+
+        /* The center pivot */
+        #crank::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 13px;
+            height: 13px;
+            background: dimgray;
+            border: 3px solid black;
+            border-radius: 50%;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .bottom-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            z-index: 10;
+            margin-bottom: 5vh;
+            justify-content: center;
+        }
+
+        .btn {
+            background: black;
+            border: 2px solid gold;
+            border-radius: 5px;
+            color: gold;
+            font-size: 3vh;
+            cursor: pointer;
+            text-align: center;
+            text-shadow: 0px 0px 12px gold;
+        }
+/* --- MODAL (POPUP) STYLES --- */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); animation: popupDrop 0.2s ease;
+        }
+
+@keyframes popupDrop {
+  0%   { transform: scale(1.1); }
+  100% { transform: scale(1); }
+  
+}
+        .modal-content {
+            background-color: var(--wood-dark);
+            margin: 5vh auto;
+            padding: 20px 15px 5px 15px;
+            border: 3px solid var(--gold);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 420px;
+            color: var(--gold);
+            box-shadow: 0px 5px 20px black;
+        }
+
+        .close-btn {
+            color: var(--gold);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: -10px;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 10px;
+        }
+
+.modal-content img {
+            width: 100%;
+    margin: 15px 0px;
+        }
+
+        .song-list {
+            list-style-type: none;
+            padding: 0 0 15px 0;
+            margin: 0;
+            max-height: 55vh;
+            overflow-y: auto;
+            border-bottom: 1px solid gold;
+        }
+
+        .song-item {
+            padding: 13px;
+            margin-bottom: 8px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--wood-light);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .song-item:active, .song-item:hover {
+            background-color: var(--gold);
+            color: var(--wood-dark);
+            font-weight: bold;
+        }
+
+        h1 {
+            color: gold;
+            text-align: center;
+            text-shadow: 0 0 15px orange, 0 0 20px black;
+            background-color: rgba(0, 0, 0, 0.4);
+            
+        }
+
+        p{
+            text-align: center;
+        }
+
+        button:hover {
+	background-image: linear-gradient(0, gray, dimgray);
+}
+        button:active {
+	background-image: linear-gradient(0, gray, dimgray);
+    transform: scale(1.1);
+}
+
+/* The new second knob */
+.bottom-knob {
+    position: absolute;
+    bottom: 0px; /* Positions it at the bottom of the crank */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 55px;
+    background: radial-gradient(circle, yellowgreen, seagreen);
+    border-radius: 50%;
+    box-shadow: inset -2px -5px 10px rgba(0,0,0,0.6);
+}
+
+/* The pumping animation */
+@keyframes pumpOrgan {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* We will add this class via JavaScript when moving */
+.organ-container.is-cranking {
+    /* 0.5s duration, linear speed, repeats forever */
+    animation: pumpOrgan 1.5s linear infinite; 
+}
+
+#lyrics-box {
+  background-color: rgba(0, 0, 0, 0.5);
+            color: yellow;
+            padding: 10px 2px;
+            border: 2px ridge orange;
+            border-radius: 5px;
+            text-align: center;
+            margin: 2vh 9% 0px 9%;
+            z-index: 10;
+            text-shadow: 2px 2px 12px black;
+}
+
+#lyrics-text {
+  margin: 0;
+}
+
+.welcome-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+    color: yellow;
+    text-decoration: none;
+}
+
+.welcome-content img {
+  width: 99%;
+  max-width: 420px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.welcome-screen.fade-out {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+#exit-btn{
+    margin: 15px 0px 25px 34%;
+    
+}

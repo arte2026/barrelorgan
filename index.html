@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Barrel Organ App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomeScreen" class="welcome-screen">
+
+  <div class="welcome-content" >
+<h1 data-i18n="bienvenido">Bienvenido</h1>
+      <h1 data-i18n="entra">ENTRA</h1>
+            
+    <img src="splash2.jpg" id="enterBtn"  alt="Gallery Entrance">
+      
+  </div>
+
+</div>
+<h1 data-i18n="title">= Organillo Virtual =</h1>
+    <div class="song-title" id="display-title">"🎵 CIELITO LINDO"</div>
+    <div id="lyrics-box">
+  <p id="lyrics-text">♪ Lyrics will appear here ♪</p>
+</div>
+
+    <div class="organ-container is-cranking">
+        
+        <div class="crank-wrapper">
+            <div id="crank"><div class="bottom-knob"></div></div>
+        </div>
+        
+    </div>
+    <div class="bottom-bar">
+            <button data-i18n="songs_btn" class="btn" id="library-btn"onclick="playButtonSound1()" 
+>Melodias</button>
+            <button data-i18n="about_btn" class="btn" id="history-btn"onclick="playButtonSound1()"
+ >Acerca</button>
+        <button data-i18n="cerrar" class="btn" id="cerrar-btn" onclick="playButtonSound1()"
+ >Dona</button>
+        </div>
+    
+    <div id="library-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 data-i18n="select_song">📜 Selecciona Cancion</h2>
+            <ul class="song-list" id="song-list">
+            
+                </ul>
+            <p>Version 1.8 G R Monroy 2026</p>
+            <p data-i18n="donate">Dona Aqui: paypal.me/Guillermo3D</p>
+            <p>- PAYPAL, MERCADO-PAGO -</p>
+        </div>
+    </div>
+    
+    <div id="history-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-history">&times;</span>
+        <h2 data-i18n="about_title">Acerca del Organillo</h2>
+        <div class="history-body" >
+            <p data-i18n="history_text"><strong>Historia: </strong> Surgido en el siglo XVIII, el organillo (u órgano callejero) se convirtió en la "máquina de discos" de la época victoriana. Permitía escuchar música compleja sin necesidad de una orquesta en vivo.</p>
+
+<p data-i18n="how_it_works"><strong>Cómo funciona: </strong> Al girar la manivela, los fuelles bombean aire a un cofre. Simultáneamente, un cilindro con pasadores o un rollo de cartón perforado gira, activando válvulas que liberan aire en tubos específicos para reproducir las notas.</p>
+
+<p data-i18n="legacy_text"><strong>El legado de Frati & Co.: </strong> Con sede en Berlín, Frati & Co. fue una empresa de maestros constructores conocida por sus instrumentos mecánicos de alta calidad a finales del siglo XIX.</p>
+        </div>
+    </div>
+</div>
+    
+    <div id="cerrar-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-cerrar">&times;</span>
+        <h2 data-i18n="cerrart">Por Favor Contribuye</h2>
+        <div class="history-body" >
+            <p data-i18n="close_text">
+            Prueba mis otras Apps en la Play Store:
+            </p>
+            <p>1. SymChess ♞<br><br>Proximamente mas</p><br>
+<p data-i18n="donate">Dona Aqui: bodisatva5@outlook.com</p>
+      <p>- PAYPAL, MERCADO-PAGO -</p>
+         <img src="gracias.jpg">  
+        </div>
+    </div>
+</div>
+
+    <audio id="organ-music" src= barrelcl.js loop></audio>
+    <audio id="buttonSound1" preload="auto">
+  <source src="click.mp3" type="audio/mpeg">
+</audio>
+    <script type="module" src="script.js" > </script>
+</body>
+</html>
