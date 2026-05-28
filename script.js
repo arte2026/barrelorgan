@@ -1,7 +1,4 @@
-import song1 from 'barrelcl.js';
-import song2 from 'baerrlcl.js';
-
-const crank = document.getElementById('crank');
+        const crank = document.getElementById('crank');
         const audio = document.getElementById('organ-music');
         const displayTitle = document.getElementById('display-title');
         
@@ -54,13 +51,13 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
                 { time: 82, text: "Mira que ya amaneció" },
                 
     ]},
-            { title: "🎻 El Danubio Azul - Blue Danube", src: "vals.mp3",
+            { title: "🎻 El Danubio Azul - Blue Danube", src: song3,
             lyrics: [
       { time: 0, text: "Johann Strauss II" },
       
                 
     ]},
-            { title: "🎅 Noche de Paz - Silent Night", src: "noche.mp3",
+            { title: "🎅 Noche de Paz - Silent Night", src: song4,
             lyrics: [
       { time: 0, text: "Noche de paz, noche de amor" },
       { time: 7, text: "Todo duerme alrededor" },
@@ -69,17 +66,17 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
                 { time: 29.5, text: "Brilla la estrella de paz" },
                 { time: 37, text: "Brilla la estrella de amor" },
     ]},
-            { title: "🕊 Ave Maria", src: "ave.mp3",
+            { title: "🕊 Ave Maria", src: song5,
             lyrics: [
       { time: 0, text: "Franz Schubert" },
                 
     ]},
-            { title: "👰 Marcha Nupcial - Wedding March", src: "boda.mp3",
+            { title: "👰 Marcha Nupcial - Wedding March", src: song6,
             lyrics: [
       { time: 0, text: "Felix Mendelssohn" },
           
     ]},
-            { title: "💀 La Llorona", src: "llorona.mp3",
+            { title: "💀 La Llorona", src: song7,
             lyrics: [
                 { time: 0, text: "..." },
       { time: 18, text: "Todos me dicen el Negro llorona" },
@@ -99,7 +96,7 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
                 { time: 65, text: "Tapame con tu rebozo llorona" },
                 { time: 68.6, text: "porque me muero de frío" },
     ]},
-            { title: "🎸 House of the Rising Sun", src: "house.mp3",
+            { title: "🎸 House of the Rising Sun", src: song8,
             lyrics: [
       { time: 0, text: "..." },
       { time: 12, text: "There is a house in New Orleans" },
@@ -115,7 +112,7 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
                 { time: 93, text: "And the only time he's satisfied" },
                 { time: 99, text: "Is when he's all drunk" },
     ]},
-            { title: "🌷 Vals de las Flores - Waltz of the Flowers", src: "flores.mp3",
+            { title: "🌷 Vals de las Flores - Waltz of the Flowers", src: song9,
             lyrics: [
       { time: 0, text: " Pyotr Tchaikovsky" },
       
