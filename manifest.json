@@ -1,0 +1,37 @@
+{
+  "name": "Organillo Callejero con Manivela",
+  "short_name": "Barrel Organ",
+  "start_url": "https://arte2026.github.io/barrelorgan/",
+  "lang": "es",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "description": "Organillo Callejero con Melodias Clasicas",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+      
+  ],
+    "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    }
+]
+}

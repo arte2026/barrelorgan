@@ -57,7 +57,7 @@
             border-radius: 5px;
             font-size: 1.2rem;
             text-align: center;
-            margin: 2vh 9% 0px 9%;
+            margin: 2vh 20% 0px 20%;
             z-index: 10;
             text-shadow: 2px 2px 12px black;
         }
@@ -266,7 +266,7 @@
             border: 2px ridge orange;
             border-radius: 5px;
             text-align: center;
-            margin: 2vh 9% 0px 9%;
+            margin: 2vh 20% 0px 20%;
             z-index: 10;
             text-shadow: 2px 2px 12px black;
 }
