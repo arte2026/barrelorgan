@@ -117,6 +117,11 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
       { time: 0, text: " Pyotr Tchaikovsky" },
       
     ]},
+             { title: "🎄 Jingle Bells", src: song10,
+            lyrics: [
+      { time: 0, text: " Pyotr Tchaikovsky" },
+      
+    ]},
         ];
 let currentSong = songLibrary[0];
         // --- MODAL & LIBRARY LOGIC ---
