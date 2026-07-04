@@ -157,12 +157,12 @@
 }
         .modal-content {
             background-color: var(--wood-dark);
-            margin: 5vh auto;
+            margin: 2vh auto;
             padding: 20px 15px 5px 15px;
             border: 3px solid var(--gold);
             border-radius: 10px;
             width: 90%;
-            max-width: 420px;
+            max-width: 480px;
             color: var(--gold);
             box-shadow: 0px 5px 20px black;
         }
@@ -190,9 +190,9 @@
 
         .song-list {
             list-style-type: none;
-            padding: 0 0 15px 0;
+            padding: 0px;
             margin: 0;
-            max-height: 55vh;
+            max-height: 60vh;
             overflow-y: auto;
             border-bottom: 1px solid gold;
         }
@@ -289,9 +289,8 @@
 }
 
 .welcome-content img {
-  width: 99%;
-  max-width: 420px;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 680px;
   align-items: center;
 }
 
