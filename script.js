@@ -342,7 +342,7 @@ const translations = {
       entra: "ENTRA",
       cerrar: "Dona",
       cerrart: "Por Favor Contribuye",
-      close_text:"Prueba mi otra App en la Play Store:",
+      close_text:"Prueba mis otras Apps en Microsoft Store:",
       
     history_text:
       "<strong>Historia: </strong> El Organillo, u Organo de Barril, es un instrumento musical mecánico y portátil inventado en Italia en el siglo XVIII. Fue mejorado en Alemania durante el siglo XIX por migrantes Italianos. Al empezar el siglo XX, era ya popular en sus diferentes modelos en Francia, Países Bajos, España e Inglaterra. Se convirtió en la máquina de discos de la época victoriana. Permitía escuchar música compleja sin necesidad de una orquesta en vivo.",
@@ -366,7 +366,7 @@ const translations = {
       entra:"ENTER",
       cerrar: "Tip",
       cerrart: "Please Support",
-      close_text:"Check out my other App in the Play Store:",
+      close_text:"Check out my other Apps in Microsoft Store:",
     history_text:
       "<strong>History:</strong> Emerging in Italy in the 18th century, the Barrel Organ (or Street Organ) is a mechanical and portable musical instrument that became popular in central and western Europe in the XIX century, it was the jukebox of the Victorian era. It allowed people to hear complex music without needing a live orchestra.",
 
