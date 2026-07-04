@@ -120,11 +120,11 @@
         .bottom-bar {
             display: flex;
             align-items: center;
-            gap: 5px;
-            padding: 5px;
+            gap: 20px;
+            
             box-sizing: border-box;
             z-index: 10;
-            margin-bottom: 5vh;
+            margin-bottom: 4vh;
             justify-content: center;
         }
 
@@ -133,10 +133,11 @@
             border: 2px solid gold;
             border-radius: 5px;
             color: gold;
-            font-size: 3vh;
+            font-size: 3.5vh;
             cursor: pointer;
             text-align: center;
             text-shadow: 0px 0px 12px gold;
+            padding: 5px 10px;
         }
 /* --- MODAL (POPUP) STYLES --- */
         .modal {
@@ -218,7 +219,8 @@
             text-align: center;
             text-shadow: 0 0 15px orange, 0 0 20px black;
             background-color: rgba(0, 0, 0, 0.4);
-            
+            font-size: 25px;
+            margin: 15px;
         }
 
         p{
@@ -269,6 +271,7 @@
             margin: 2vh 20% 0px 20%;
             z-index: 10;
             text-shadow: 2px 2px 12px black;
+            font-size: 1.2rem;
 }
 
 #lyrics-text {

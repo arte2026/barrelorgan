@@ -119,8 +119,22 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
     ]},
              { title: "🎄 Jingle Bells", src: song10,
             lyrics: [
-      { time: 0, text: " Pyotr Tchaikovsky" },
-      
+      { time: 0, text: " Dashing through the snow" },
+      { time: 2, text: " In a one-horse open sleigh" },
+      { time: 4, text: " Over the fields we go" },
+      { time: 6, text: " Laughing all the way" },
+      { time: 9, text: " Bells on bobtails ring" },
+      { time: 11, text: " Making spirits bright" },
+      { time: 14, text: " What fun it is to ride and sing" },
+      { time: 16, text: " A sleighing song tonight, oh!" },
+      { time: 19, text: " Jingle bells, jingle bells" },
+      { time: 22, text: " Jingle all the way" },
+      { time: 24, text: " Oh, what fun it is to ride" },
+      { time: 26, text: " In a one-horse open sleigh, hey!" },
+      { time: 28, text: " Jingle bells, jingle bells" },
+      { time: 31, text: " Jingle all the way" },
+      { time: 32, text: " Oh, what fun it is to ride" },
+      { time: 34, text: " In a one-horse open sleigh" },
     ]},
         ];
 let currentSong = songLibrary[0];
