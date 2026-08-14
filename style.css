@@ -133,11 +133,11 @@
             border: 2px solid gold;
             border-radius: 5px;
             color: gold;
-            font-size: 3.5vh;
+            font-size: 3vh;
             cursor: pointer;
             text-align: center;
             text-shadow: 0px 0px 12px gold;
-            padding: 5px 10px;
+            padding: 5px 40px;
         }
 /* --- MODAL (POPUP) STYLES --- */
         .modal {
@@ -162,7 +162,7 @@
             padding: 20px 15px 5px 15px;
             border: 3px solid var(--gold);
             border-radius: 10px;
-            width: 90%;
+            
             max-width: 480px;
             color: var(--gold);
             box-shadow: 0px 5px 20px black;
@@ -185,8 +185,9 @@
         }
 
 .modal-content img {
-            width: 100%;
+            width: 90%;
     margin: 15px 0px;
+	padding: 0px 23px;
         }
 
         .song-list {
@@ -218,7 +219,7 @@
             color: gold;
             text-align: center;
             text-shadow: 0 0 15px orange, 0 0 20px black;
-            background-color: rgba(0, 0, 0, 0.4);
+            
             font-size: 25px;
             margin: 15px;
         }
@@ -282,7 +283,9 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: black;
+  background-image: url("wood.png");
+    background-repeat: repeat;
+    background-color: #3e2723;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,4 +308,227 @@
 #exit-btn{
     margin: 15px 0px 25px 34%;
     
+}
+
+/* -------------------------
+   KEYBOARD AREA
+------------------------- */
+
+.keyboard-container {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 15%;
+}
+
+
+/* -------------------------
+   KEYBOARD
+------------------------- */
+
+.keyboard {
+    position: relative;
+
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+
+    -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+
+        touch-action: none;
+border-top: 40px solid #2b2b2b;
+border-bottom: 20px solid #2b2b2b;
+
+}
+
+#keyboard button {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    touch-action: none;
+}
+/* -------------------------
+   WHITE KEYS
+------------------------- */
+
+.white-key {
+    position: relative;
+
+    flex: 1;
+
+    height: 100%;
+
+    border: 1px solid #555;
+    border-radius: 0 0 8px 8px;
+
+    background: ivory;
+
+    box-shadow:
+        0 5px 0 #bbbbbb;
+
+    padding: 0;
+
+    -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+
+        touch-action: none;
+}
+
+.white-key span {
+    position: absolute;
+
+    bottom: 12px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    font-size: 18px;
+    color: #1c1c1c;
+
+    pointer-events: none;
+}
+
+
+/* pressed white key */
+
+.white-key.active {
+    background: #dddddd;
+
+    transform: translateY(4px);
+
+    box-shadow:
+        0 1px 0 #999;
+}
+
+
+/* -------------------------
+   BLACK KEYS
+------------------------- */
+
+.black-key {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 0;
+
+    width: 11%;
+    height: 58%;
+
+    border: 1px solid #3f3620;
+    border-radius: 0 0 6px 6px;
+
+    background: #3f3620;
+
+    color: white;
+
+    box-shadow:
+        0 5px 0 #3f3620;
+
+    font-size: 15px;
+
+    padding: 0;
+
+    touch-action: none;
+    -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+}
+
+.black-key.active {
+    background: #555;
+
+    transform: translateY(4px);
+
+    box-shadow:
+        0 1px 0 #000;
+}
+
+
+/*
+   Positions between white keys
+*/
+
+.black-c {
+    left: calc(14.285% - 5.5%);
+}
+
+.black-d {
+    left: calc(28.57% - 5.5%);
+}
+
+.black-f {
+    left: calc(57.14% - 5.5%);
+}
+
+.black-g {
+    left: calc(71.43% - 5.5%);
+}
+
+.black-a {
+    left: calc(85.71% - 5.5%);
+}
+
+/* Modern browsers — Chrome 121+, Edge 121+, Firefox, Safari 18.2+ */
+* {
+  scrollbar-width: 12px;
+  scrollbar-color: #f59e0b #fffbeb;
+}
+
+/* Legacy WebKit — older Chrome/Edge/Safari, radius, borders & shadows */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #fffbeb;
+  border-radius: 6px;
+  padding: 1px;
+  border: 1px solid #fde68a;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #fef3c7;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #fde68a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f59e0b;
+  border-radius: 6px;
+  min-height: 30px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #d97706;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #92400e;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }

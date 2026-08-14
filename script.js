@@ -349,23 +349,24 @@ const translations = {
     song_title: 'CANCIÓN: "CIELITO LINDO"',
     songs_btn: "Melodias",
     about_btn: "Acerca",
-    about_title: "Acerca del Organillo",
+	about_btn2: "Teclado",
+    about_title: "El Organillo",
     select_song: "📜 Selecciona Canción",
-    donate: "Dona Aqui: bodisatva5@outlook.com",
+    donate: "💰 Dona Aqui: paypal.me/Guillermo3D",
       bienvenido: "Bienvenido",
       entra: "ENTRA",
       cerrar: "Dona",
       cerrart: "Por Favor Contribuye",
-      close_text:"Prueba mis otras Apps en Microsoft Store:",
+      close_text:"*Prueba mis otras Apps en la Play Store:<br><br>- SymChess ♞<br><br>- Juegos Educativos Campanita 🏅<br><br>*Esta App tambien esta disponible en la Tienda Microsoft para Equipos con Windows 10/11. ",
       
     history_text:
-      "<strong>Historia: </strong> El Organillo, u Organo de Barril, es un instrumento musical mecánico y portátil inventado en Italia en el siglo XVIII. Fue mejorado en Alemania durante el siglo XIX por migrantes Italianos. Al empezar el siglo XX, era ya popular en sus diferentes modelos en Francia, Países Bajos, España e Inglaterra. Se convirtió en la máquina de discos de la época victoriana. Permitía escuchar música compleja sin necesidad de una orquesta en vivo.",
+      "<strong>El Organillo</strong>, u Organo de Barril, es un instrumento musical mecánico y portátil inventado en Italia en el siglo XVIII. Fue mejorado en Alemania durante el s. XIX por migrantes Italianos, y al empezar el s. XX, era ya popular en Europa y America. Se convirtió en la rocola de la época victoriana. Permitía escuchar música compleja sin necesidad de una orquesta en vivo.",
 
     how_it_works:
-      "<strong>Cómo funciona: </strong> Al girar la manivela, los fuelles bombean aire a un cofre. Simultáneamente, un cilindro con pasadores o un rollo de cartón perforado gira, activando válvulas que liberan aire en tubos específicos para reproducir las notas.",
+      "<strong>Cómo funciona: </strong> Al girar la manivela, los fuelles bombean aire a un cofre. Luego, un cilindro con pasadores o un rollo de cartón perforado gira, activando válvulas que liberan aire en tubos específicos para reproducir las notas.",
 
     legacy_text:
-      "<strong>El legado de Frati & Co.: </strong> Fundada por los italianos Giovanni Bacigalupo y Chiario Fratia en 1873 en la ciudad de Berlín, Frati & Co. fue una empresa de maestros constructores conocida por sus instrumentos mecánicos de alta calidad.",
+      "<strong>Frati & Co. </strong> fue una compañia de maestros constructores conocida por sus instrumentos mecánicos de alta calidad. Fundada por los italianos Giovanni Bacigalupo y Chiario Fratia en 1873 en la ciudad de Berlín.",
   },
 
   en: {
@@ -373,16 +374,17 @@ const translations = {
     song_title: 'SONG: "CIELITO LINDO"',
     songs_btn: "Songs",
     about_btn: "About",
-    about_title: "About the Barrel Organ",
+	about_btn2: "Keyboard",
+    about_title: "The Barrel Organ",
     select_song: "📜 Select Song",
-    donate: "Donate: bodisatva5@outlook.com",
+    donate: "💰 Donate: paypal.me/Guillermo3D",
     bienvenido:"Welcome",
       entra:"ENTER",
       cerrar: "Tip",
       cerrart: "Please Support",
-      close_text:"Check out my other Apps in Microsoft Store:",
+      close_text:"*Check out my other Android Apps in the Play Store:<br><br>- SymChess ♞<br><br>- Educational Games Campanita 🏅<br><br> *This App is also available in the Microsoft Store for Devices with Windows 10/11.",
     history_text:
-      "<strong>History:</strong> Emerging in Italy in the 18th century, the Barrel Organ (or Street Organ) is a mechanical and portable musical instrument that became popular in central and western Europe in the XIX century, it was the jukebox of the Victorian era. It allowed people to hear complex music without needing a live orchestra.",
+      "<strong>History:</strong> Emerging in Italy in the 18th century, the Barrel Organ (or Street Organ) is a mechanical and portable musical instrument that became popular in Europe in the XIX century, it was the jukebox of the Victorian era. It allowed people to hear complex music without needing a live orchestra.",
 
     how_it_works:
       "<strong>How it works:</strong> As you turn the crank, bellows pump air into a windchest. Simultaneously, a pinned cylinder or perforated cardboard roll rotates, triggering valves that release air into specific pipes to play notes.",
@@ -476,6 +478,10 @@ enterBtn.addEventListener("click", () => {
 welcomeScreen.addEventListener("click", () => {
   enterBtn.click();
 });
+
+function goBack() {
+  window.location.href = "index2.html";
+}
 
 // Check if Service Workers are supported
 if ("serviceWorker" in navigator) {
