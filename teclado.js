@@ -11,72 +11,62 @@ document.body.addEventListener("click", () => {
 // ========================================
 
 const activeNotes = new Map();
+const audioPool = new Map();
 
+// ========================================
+// PRELOAD ORGAN SAMPLES
+// ========================================
+
+Object.keys(organSamples).forEach(note => {
+
+    const audio = new Audio();
+
+    audio.src = organSamples[note];
+
+    audio.preload = "auto";
+
+    audio.load();
+
+    audioPool.set(note, audio);
+
+});
 
 // ========================================
 // Play note
 // ========================================
 
-function playNote(note, key) {
+function playNote(note) {
 
     const sample = organSamples[note];
 
     if (!sample) {
-        console.error("Sample not found:", note);
+        console.warn("Sample not found:", note);
         return;
     }
 
-    console.log("Playing:", note);
+    // Get preloaded audio
+    const audio = audioPool.get(note);
 
+    if (!audio) {
+        console.warn("Audio not preloaded:", note);
+        return;
+    }
 
-    // Create audio from Base64 MP3
-    const audio = new Audio();
-
-    audio.src = sample;
-
-    audio.preload = "auto";
+    // Make sure the sample starts from the beginning
+    audio.currentTime = 0;
 
     audio.volume = 1.0;
 
-
-    // Store audio object
+    // Store currently playing note
     activeNotes.set(note, audio);
 
-
-    // Visual feedback
-    key.classList.add("active");
-
-
     // Play immediately
-    const playPromise = audio.play();
+    audio.play().catch(error => {
 
-    if (playPromise !== undefined) {
-
-        playPromise
-            .then(() => {
-
-                console.log("Playing successfully:", note);
-
-            })
-            .catch(error => {
-
-                console.error(
-                    "Audio playback error:",
-                    error
-                );
-
-            });
-    }
-
-
-    // Remove when finished
-    audio.addEventListener("ended", () => {
-
-        if (activeNotes.get(note) === audio) {
-
-            activeNotes.delete(note);
-
-        }
+        console.log(
+            "Audio playback error:",
+            error
+        );
 
     });
 }
@@ -84,24 +74,18 @@ function playNote(note, key) {
 // Stop note
 // ========================================
 
-function stopNote(note, key) {
+function stopNote(note) {
 
     const audio = activeNotes.get(note);
 
     if (!audio) return;
 
-
     audio.pause();
 
     audio.currentTime = 0;
 
-
     activeNotes.delete(note);
-
-    key.classList.remove("active");
 }
-
-
 // ========================================
 // KEY PRESS / RELEASE
 // ========================================
