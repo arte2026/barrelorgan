@@ -66,7 +66,7 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
                 { time: 29.5, text: "Brilla la estrella de paz" },
                 { time: 37, text: "Brilla la estrella de amor" },
     ]},
-            { title: "🕊 Ave Maria", src: song5,
+            { title: "🙏 Ave Maria", src: song5,
             lyrics: [
       { time: 0, text: "Franz Schubert" },
                 
@@ -135,6 +135,11 @@ const VIBRATION_INTERVAL = 30; // Vibrate every 20 degrees
       { time: 31, text: " Jingle all the way" },
       { time: 32, text: " Oh, what fun it is to ride" },
       { time: 34, text: " In a one-horse open sleigh" },
+    ]},
+     { title: "🌊 Sobre las Olas - Over the Waves", src: song11,
+            lyrics: [
+      { time: 0, text: "Juventino Rosas" },
+      
     ]},
         ];
 let currentSong = songLibrary[0];
