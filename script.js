@@ -247,7 +247,7 @@ let currentSong = songLibrary[0];
             let speedRatio = Math.abs(delta) / NORMAL_PLAYBACK_SPEED;
             
             // Clamp it between 0.5x and 1.5x so the audio doesn't distort too wildly
-            audio.playbackRate = Math.min(1, Math.max(0.7, speedRatio));
+            audio.playbackRate = Math.min(1.1, Math.max(0.7, speedRatio));
 
             clearTimeout(playTimeout);
             playTimeout = setTimeout(() => {
@@ -347,17 +347,17 @@ const translations = {
   es: {
     title: "= Organillo Virtual =",
     song_title: 'CANCIÓN: "CIELITO LINDO"',
-    songs_btn: "Melodias",
-    about_btn: "Acerca",
-	about_btn2: "Teclado",
+    songs_btn: "📜 Melodias",
+    about_btn: "💡 Acerca",
+	about_btn2: "🎹 Teclado",
     about_title: "El Organillo",
     select_song: "📜 Selecciona Canción",
     donate: "💰 Dona Aqui: paypal.me/Guillermo3D",
       bienvenido: "Bienvenido",
       entra: "ENTRA",
-      cerrar: "Dona",
+      cerrar: "💰 Dona",
       cerrart: "Por Favor Contribuye",
-      close_text:"*Prueba mis otras Apps en la Play Store:<br><br>- SymChess ♞<br><br>- Juegos Educativos Campanita 🏅<br><br>*Esta App tambien esta disponible en la Tienda Microsoft para Equipos con Windows 10/11. ",
+      close_text:"Prueba mis otras Apps en la Tienda Microsoft:<br><br>1. SymChess ♞<br>2. Juegos Educativos Campanita 🔔<br>3. Flip-O  Juego Mental 🎓<br><br>*Esta App tambien esta disponible en Google Play Store para Android.",
       
     history_text:
       "<strong>El Organillo</strong>, u Organo de Barril, es un instrumento musical mecánico y portátil inventado en Italia en el siglo XVIII. Fue mejorado en Alemania durante el s. XIX por migrantes Italianos, y al empezar el s. XX, era ya popular en Europa y America. Se convirtió en la rocola de la época victoriana. Permitía escuchar música compleja sin necesidad de una orquesta en vivo.",
@@ -372,17 +372,17 @@ const translations = {
   en: {
     title: "= Barrel Organ =",
     song_title: 'SONG: "CIELITO LINDO"',
-    songs_btn: "Songs",
-    about_btn: "About",
-	about_btn2: "Keyboard",
+    songs_btn: "📜 Songs",
+    about_btn: "💡 About",
+	about_btn2: "🎹 Keyboard",
     about_title: "The Barrel Organ",
     select_song: "📜 Select Song",
     donate: "💰 Donate: paypal.me/Guillermo3D",
     bienvenido:"Welcome",
       entra:"ENTER",
-      cerrar: "Tip",
+      cerrar: "💰 Tip",
       cerrart: "Please Support",
-      close_text:"*Check out my other Android Apps in the Play Store:<br><br>- SymChess ♞<br><br>- Educational Games Campanita 🏅<br><br> *This App is also available in the Microsoft Store for Devices with Windows 10/11.",
+      close_text:"Check out my other Apps in the MS Store:<br><br>1. SymChess ♞<br>2. Educational Games Campanita 🔔<br>3. Flip-O  Spatial Reasoning Puzzles 🎓<br><br> *This App is also available in the Play Store for Android devices.",
     history_text:
       "<strong>History:</strong> Emerging in Italy in the 18th century, the Barrel Organ (or Street Organ) is a mechanical and portable musical instrument that became popular in Europe in the XIX century, it was the jukebox of the Victorian era. It allowed people to hear complex music without needing a live orchestra.",
 
@@ -390,7 +390,7 @@ const translations = {
       "<strong>How it works:</strong> As you turn the crank, bellows pump air into a windchest. Simultaneously, a pinned cylinder or perforated cardboard roll rotates, triggering valves that release air into specific pipes to play notes.",
 
     legacy_text:
-      "<strong>The Frati & Co. Legacy:</strong> Created by Italians Giovanni Bacigalupo y Chiario Fratia in 1873 in the city of Berlin, Frati & Co. was a company of master builders known for their high quality mechanical instruments.",
+      "<strong>The Frati & Co. Legacy:</strong> Created by Italians Giovanni Bacigalupo and Chiario Fratia in 1873 in the city of Berlin, Frati & Co. was a company of master builders known for their high quality mechanical instruments.",
   }
 };
 

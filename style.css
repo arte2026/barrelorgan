@@ -19,7 +19,7 @@
             background-image: url(fondo1.jpg);
   background-repeat: repeat;
   /* Animation */
-  animation: move 175s linear infinite;
+  animation: move 170s linear infinite;
             font-family: 'Caviar Dreams', sans-serif;
             display: flex;
             flex-direction: column;
